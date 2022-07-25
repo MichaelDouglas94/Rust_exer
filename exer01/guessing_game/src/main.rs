@@ -1,5 +1,6 @@
 use std::io;
-use rand::Rng;
+use rand::Rng; // método para gerar números aleatórios
+
 
 fn main() {
     println!("Guess the number!");
