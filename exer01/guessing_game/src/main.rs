@@ -19,4 +19,12 @@ fn main() {
         .expect("Failed to read line");
     
     println!("You guesssed: {guess}");
+
+    match guess.cmp(&secret_number) {
+        Ordering::less => println!("Too small!"),
+        Ordering::Greater => println("Too big"),
+        Ordering::Equal => println!("You win!!"),
+    }
 }
+
+// arm’s pattern. tradução 
