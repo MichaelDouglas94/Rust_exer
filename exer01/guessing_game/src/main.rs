@@ -1,7 +1,8 @@
 use std::io;
 use std::cmp::Ordering;
-use rand::Rng; // método para gerar números aleatórios
+use rand::Rng; // importação  para gerar números aleatório
 
+// Progama para advinhar números pseu do alétórios.
 
 fn main() {
     println!("Guess the number!");
@@ -15,7 +16,7 @@ fn main() {
 
         // Comentários, o mut permite que a variável seja mutável. 
         let mut guess = String::new();
-
+        // Tratamento de erro. 
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
@@ -24,7 +25,7 @@ fn main() {
 
         println!("You guesssed: {guess}");
 
-
+        // Comparando o número do usuário com o número gerado pelo rand
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big"),
